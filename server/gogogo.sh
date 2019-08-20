@@ -37,3 +37,10 @@ echo ""
 echo "外网终端请配置此uuid：$uuid1" 
 echo "服务端配置已完成，请确保所有端口已添加到防火墙"
 
+systemctl restart v2ray &>/dev/null
+
+systemctl enable v2ray &>/dev/null
+
+service v2ray restart &>/dev/null
+
+service v2ray enalbe &>/dev/null
