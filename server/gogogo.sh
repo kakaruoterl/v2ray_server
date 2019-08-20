@@ -15,9 +15,9 @@ uuid1=`/usr/bin/v2ray/v2ctl uuid`
 
 sed -ri '/"port":/c\      "port":'$pt',' /root/sys_config.txt
 
-sed -ri '/"id":/c\          "id":'$uuid',' /root/sys_config.txt
+sed -ri '/"id":/c\          "id":'$uuid1',' /root/sys_config.txt
 
-cat sys_config.txt >>/etc/v2ray/config.json
+cat sys_config.txt >/etc/v2ray/config.json
 
 clear
 
