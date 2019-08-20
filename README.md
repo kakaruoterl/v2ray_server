@@ -1,5 +1,7 @@
 # v2ray_server
-v2ray反向代理脚本
+v2ray反向代理脚本，该脚本中的v2ray脚本及config.json文件均来自v2ray官网
+
+该脚本为v2ray反向代理脚本，穿透内网利器，非科学上网脚本
 
 使用方法：
 
