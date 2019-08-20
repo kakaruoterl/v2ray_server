@@ -17,11 +17,11 @@ uuid2=`/usr/bin/v2ray/v2ctl uuid`
 
 sed -ri '14s/.*/      "port":'$pt1',/' /root/sys_config.txt
 
-sed -ri '19s/.*/            "id":'$uuid1',/' /root/sys_config.txt
+sed -ri '19s/.*/            "id":"'$uuid1'",/' /root/sys_config.txt
 
 sed -ri '28s/.*/      "port":'$pt2',/' /root/sys_config.txt
 
-sed -ri '33s/.*/            "id":'$uuid2',/' /root/sys_config.txt
+sed -ri '33s/.*/            "id":"'$uuid2'",/' /root/sys_config.txt
 
 cat sys_config.txt >/etc/v2ray/config.json
 
