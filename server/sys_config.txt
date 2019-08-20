@@ -1,0 +1,48 @@
+{  
+  "reverse":{  
+    "portals":[  
+      {  
+        "tag":"portal",
+        "domain":"web.ggddcc.top"        
+      }
+    ]
+  },
+  "inbounds":[
+    {  
+      
+      "tag":"tunnel", 
+      "port":8899,
+      "protocol":"vmess",
+      "settings":{  
+        "clients":[  
+          {  
+            "id":"554c2baa-f8a0-1265-1669-c4eaa888496a",
+            "alterId":64
+          }
+        ]
+      }
+    },
+    
+  ],
+  "routing":{   
+    "rules":[  
+      {  
+        "type":"field",
+        "inboundTag":[  
+          "interconn"
+        ],
+        "outboundTag":"portal"
+      },
+      {  
+        "type":"field",
+        "inboundTag":[  
+          "tunnel"
+        ],
+        "domain":[  
+          "full:web.ggddcc.top"
+        ],
+        "outboundTag":"portal"
+      }
+    ]
+  }
+}
