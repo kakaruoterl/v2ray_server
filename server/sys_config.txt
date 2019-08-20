@@ -11,7 +11,7 @@
     {  
       
       "tag":"tunnel", 
-      "port":8899,
+      "port":12321,
       "protocol":"vmess",
       "settings":{  
         "clients":[  
@@ -23,6 +23,19 @@
       }
     },
     
+    {  
+      "tag": "interconn",
+      "port":6543,
+      "protocol":"vmess",
+      "settings":{  
+        "clients":[  
+          {  
+            "id":"98dc41dd-cfe5-3be7-17c8-1fe722a29f98",
+            "alterId":64
+          }
+        ]
+      }
+    }
   ],
   "routing":{   
     "rules":[  
