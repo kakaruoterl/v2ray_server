@@ -11,4 +11,4 @@ wget https://raw.githubusercontent.com/kakaruoterl/v2ray_server/master/server.ta
 
 2、内网中的服务器（本脚本中不包含v2ray安装脚本，需要先将v2ray安装到服务器后再运行下面的脚本。如果在安装好v2ray的docker中运行则可直接运行此脚本）：
 
-wget https://raw.githubusercontent.com/kakaruoterl/v2ray_server/master/client/client.tar && tar xvf client.tar && chmod +x gogo.sh && bash gogo.sh
+wget https://raw.githubusercontent.com/kakaruoterl/v2ray_server/master/client/client.tar && tar xvf client.tar && chmod +x gogo.sh && sh gogo.sh
