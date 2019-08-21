@@ -1,0 +1,62 @@
+{  
+  "reverse":{ 
+    
+    "bridges":[  
+      {  
+        "tag":"bridge", 
+        "domain":"web.ggddcc.top" 
+      }
+    ]
+  },
+  "outbounds":[
+    {  
+       
+      "tag":"tunnel", 
+      "protocol":"vmess",
+      "settings":{  
+        "vnext":[  
+          {  
+            "address":"1.2.3.4",
+            "port":4321,
+            "users":[  
+              {  
+                "id":"98dc41dd-cfe5-3be7-17c8-1fe722a21234",
+                "alterId":64
+              }
+            ]
+          }
+        ]
+      }
+    },
+        
+    {  
+      "protocol":"freedom",
+      "settings":{  
+      },
+      "tag":"out"
+    }
+  ],
+  "routing":{  
+    "rules":[  
+      {  
+      
+        "type":"field",
+        "inboundTag":[  
+          "bridge"
+        ],
+        "domain":[  
+          "full:web.ggddcc.top"
+        ],
+        "outboundTag":"tunnel"
+      },
+      {  
+      
+        "type":"field",
+        "inboundTag":[  
+          "bridge"
+        ],
+        "outboundTag":"out"
+      }
+    ]    
+  }
+}
