@@ -5,12 +5,12 @@
 read -p "请输入服务器防火墙中已添加的一个端口号：" pt1
 read -p "请输入第二个已添加的端口号：" pt2
 
-wget https://install.direct/go.sh
-
-chmod +x go.sh
-
-./go.sh
+if [ ! -f /etc/v2ray/config.json ];then
+    wget https://install.direct/go.sh
+    chmod +x go.sh
+    ./go.sh
 #此乃v2ray官方脚本
+fi
 
 uuid1=`/usr/bin/v2ray/v2ctl uuid`
 uuid2=`/usr/bin/v2ray/v2ctl uuid`
