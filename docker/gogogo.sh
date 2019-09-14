@@ -3,7 +3,7 @@
 #v1.0 for docker by kakaruoter 2019.9.14
 docker
 if [ $? != 0 ];then
-    cd /etc/yum.repo.d/
+    cd /etc/yum.repos.d/
     wget https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
     cd
     yum -y install docker-ce
@@ -23,8 +23,8 @@ uuid1=`cat /proc/sys/kernel/random/uuid`
 uuid2=`cat /proc/sys/kernel/random/uuid`
 uuid3=`cat /proc/sys/kernel/random/uuid`
 
-sed -ri '4s/.*/      "port":'$pt1',/' /root/v2.txt
-sed -ri '9s/.*/            "id":"'$uuid1'",/' /root/v2.txt
+sed -ri '8s/.*/      "port":'$pt1',/' /root/v2.txt
+sed -ri '13s/.*/            "id":"'$uuid1'",/' /root/v2.txt
 
 cp v2.txt /docker/v2/config.json
 
@@ -54,4 +54,4 @@ echo "写入内网服务器的uuid为：$uuid3"
 
 echo ""
 echo "外网终端上使用的端口号为： $pt2"
-echo "外网终端上使用的uuid为： $uuid3"
+echo "外网终端上使用的uuid为： $uuid2"
