@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 #v2ray科学上网及反向代理服务器端
-#v1.0 for docker by kakaruoter 2019.8.20
+#v1.0 for docker by kakaruoter 2019.9.14
 docker
 if [ $? != 0 ];then
         yum -y install docker
@@ -20,8 +20,8 @@ uuid1=`cat /proc/sys/kernel/random/uuid`
 uuid2=`cat /proc/sys/kernel/random/uuid`
 uuid3=`cat /proc/sys/kernel/random/uuid`
 
-sed -ri '8s/.*/      "port":'$pt1',/' /root/v2.txt
-sed -ri '13s/.*/            "id":"'$uuid1'",/' /root/v2.txt
+sed -ri '4s/.*/      "port":'$pt1',/' /root/v2.txt
+sed -ri '9s/.*/            "id":"'$uuid1'",/' /root/v2.txt
 
 cp v2.txt /docker/v2/config.json
 
@@ -29,8 +29,8 @@ docker run --name v2 -d -v /docker/v2:/etc/v2ray -p $pt1:$pt1 v2ray/official
 
 sed -ri '14s/.*/      "port":'$pt2',/' /root/ofv2.txt
 sed -ri '19s/.*/            "id":"'$uuid2'",/' /root/ofv2.txt
-sed -ri '28s/.*/      "port":'$pt3',/' /root/v2.txt
-sed -ri '33s/.*/            "id":"'$uuid3'",/' /root/v2.txt
+sed -ri '28s/.*/      "port":'$pt3',/' /root/ofv2.txt
+sed -ri '33s/.*/            "id":"'$uuid3'",/' /root/ofv2.txt
 cp ofv2.txt /docker/ofv2/config.json
 
 docker run --name ofv2 -d -v /docker/ofv2:/etc/v2ray -p $pt2:$pt2 -p $pt3:$pt3 v2ray/official
