@@ -3,7 +3,10 @@
 #v1.0 for docker by kakaruoter 2019.9.14
 docker
 if [ $? != 0 ];then
-        yum -y install docker
+    cd /etc/yum.repo.d/
+    wget https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+    cd
+    yum -y install docker-ce
 fi
 systemctl restart docker
 systemctl enable docker
