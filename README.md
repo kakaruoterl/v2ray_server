@@ -14,5 +14,7 @@ wget https://raw.githubusercontent.com/kakaruoterl/v2ray_server/master/server.ta
 wget https://raw.githubusercontent.com/kakaruoterl/v2ray_server/master/client/client.tar && tar xvf client.tar && chmod +x gogo.sh && sh gogo.sh
 
 3、docker服务器端
+
 在服务器端用docker同时安装科学上网及反向代理：
+
 wget https://raw.githubusercontent.com/kakaruoterl/v2ray_server/master/docker/docker.tar && tar xvf docker.tar && chmod +x gogogo.sh && bash gogogo.sh
