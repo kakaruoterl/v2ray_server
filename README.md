@@ -15,6 +15,6 @@ wget https://raw.githubusercontent.com/kakaruoterl/v2ray_server/master/client/cl
 
 3、docker服务器端
 
-在服务器端用docker同时安装科学上网及反向代理：
+在服务器端用docker同时安装科学上网及反向代理(9.16更新，可选择安装)：
 
 wget https://raw.githubusercontent.com/kakaruoterl/v2ray_server/master/docker/docker.tar && tar xvf docker.tar && chmod +x gogogo.sh && bash gogogo.sh
